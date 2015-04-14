@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Test JS</title>
+</head>
+<body>
+<script>
+var a = 1;
+var b = a;
+console.log("EXAMPLE OF PASS BY VALUE (a,b)"+"       "+"a="+a+"  "+"b="+b);
+
+var c={name:'Test',type:'message'};
+var d=c;
+console.log("EXAMPLE OF PASS BY REFERENCE (c , d)"+"     "+"c name="+c.name+"   and   "+"d name="+d.name);
+
+b=2;
+console.log("CHANGE IN VALUE FOR PASS BY VALUE (a,b)"+"       "+"a="+a+"  "+"b="+b);
+
+d.name='Change';
+console.log("CHANGE IN VALUE FOR PASS BY REFERENCE"+"      "+"c name="+c.name+"   and   "+"d name="+d.name);
+
+var m=2;
+var n='QBurst';
+var o=true;
+var p={name:'Test',type:'message'}
+console.log("VARIABLES TYPES");
+console.log("m="+typeof(m)+"  "+"n="+typeof(n)+"  "+"o="+typeof(o)+"  "+"p="+typeof(p));
+
+var x = function () {};
+var y=['1','2'];
+console.log("x="+typeof(x)+"  "+"y="+typeof(y));
+</script>
+</body>
+</html>
