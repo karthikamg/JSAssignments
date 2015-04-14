@@ -7,7 +7,7 @@
 var cart = [{
 	id: 401,
 	name: 'Indulekha white soap',
-	price: 33.78,
+	price: 33.80,
 	qty: 2
 }, {
 	id: 402,
@@ -22,7 +22,7 @@ var cart = [{
 }, {
 	id: 404,
 	name: 'Bar Tool Tongs',
-	price: 54.73,
+	price: 54.70,
 	qty: 1
 }, {
 	id: 405,
