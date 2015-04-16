@@ -16,7 +16,7 @@
 		console.log(each);
 
 	// map
-		var map = _.map(cart, _.size);
+		var map = _.map(arrayOfId, function(num){ return num+100;});
 		console.log(map);
 
 	// reduce
