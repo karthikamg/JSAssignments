@@ -12,7 +12,7 @@
 		var each = _.each(cart, function(){
 			return each;
 		} );
-		var array = [each[0].price,each[1].price,each[2].price,each[3].price,each[4].price,each[5].price,each[6].price,each[7].price];
+		var arrayOfId = [each[0].id,each[1].id,each[2].id,each[3].id,each[4].id,each[5].id,each[6].id,each[7].id];
 		console.log(each);
 
 	// map
@@ -20,11 +20,11 @@
 		console.log(map);
 
 	// reduce
-		var reduce = _.reduce([1, array[4],array[7]], function(memo, num){ return memo * num; });
+		var reduce = _.reduce([1, arrayOfId[4],arrayOfId[7]], function(memo, num){ return memo * num; });
 		console.log(reduce);
 
 	//find
-		var find = _.find(array,function(num){
+		var find = _.find(arrayOfId,function(num){
 			if(num%3 ==0){
 				console.log(num);
 			}
@@ -169,7 +169,7 @@
 		console.log(object);
 
 	//indexOf
-		var indexOf = _.indexOf(array,5850);
+		var indexOf = _.indexOf(arrayOfId,406);
 		console.log(indexOf);
 
 	//lastIndexOf
@@ -177,11 +177,11 @@
 		console.log(lastIndexOf);
 
 	//sortedIndex
-		var sortedIndex = _.sortedIndex([each[0].id,each[1].id,each[2].id,each[3].id,each[4].id,each[5].id,each[6].id,each[7].id],409);
+		var sortedIndex = _.sortedIndex(arrayOfId,409);
 		console.log(sortedIndex);
 
 	//findIndex
-		var findIndex = _.findIndex(array, function(num){ return num==5850;});
+		var findIndex = _.findIndex(arrayOfId, function(num){ return num==404;});
 		console.log(findIndex);	
 
 	//findLastIndex
