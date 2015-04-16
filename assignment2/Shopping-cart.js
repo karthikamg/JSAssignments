@@ -15,7 +15,7 @@ var cart = [{
 	price: 91.40,
 	qty: 1
 }, {
-	id: 402,
+	id: 403,
 	name: 'Al Mar Knives',
 	price: 73.90,
 	qty: 2
