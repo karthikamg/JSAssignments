@@ -9,9 +9,8 @@
 	<script>
 
 	//each
-		var each = _.each(cart, function(value,key,list){
-			var rating = list[key];			
-			rating["rating"]=5;
+		var each = _.each(cart, function(){
+		   return each;
 		} );
 		var arrayOfId = [each[0].id,each[1].id,each[2].id,each[3].id,each[4].id,each[5].id,each[6].id,each[7].id];
 		console.log(each);
