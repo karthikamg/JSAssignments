@@ -41,9 +41,9 @@
 			secondfunction();
 
 		//function with its own ppty
-			var ppty = function(){
+			function ppty(){
 				name= 'karthika';
-				id= 101;
+				this.id= 102;
 				console.log(name+"  "+id);
 			}
 			ppty();
@@ -52,7 +52,7 @@
 			var thisfunc = function(){
 				this.type= 'Hello';
 				name= 'World';
-				console.log(this.type+" "+this.name);
+				console.log(this.type+" "+this.name+'  '+id);
 			}
 			thisfunc();
 
