@@ -43,16 +43,16 @@
 		//function with its own ppty
 			function ppty(){
 				name= 'karthika';
-				this.id= 102;
+				var id= 102;
 				console.log(name+"  "+id);
 			}
 			ppty();
 
 		//function using this
 			var thisfunc = function(){
-				this.type= 'Hello';
-				name= 'World';
-				console.log(this.type+" "+this.name+'  '+id);
+				type= 'Hello';
+				console.log(this);
+				console.log(this.type+" "+name);
 			}
 			thisfunc();
 
