@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Assignment4</title>
+</head>
+<body>
+	<script>
+
+		//egs for functions stored
+			var varfunction = function() {
+				console.log('variable');
+			};
+			varfunction();
+
+			var objfunction = {
+				a: 1,
+				b: 'test',
+				c: function(){
+					console.log('object');
+				}
+			}
+			objfunction.c();
+
+			var arrayfunction = [1,2,'apple',function(){ console.log('array');},'bat']
+			arrayfunction[3]();
+
+		//egs for functions passed as arguments
+			function fun1(){return 'argument function'};
+			var function1 = function fun2(fun1){
+				console.log(fun1);
+			};
+			function1(fun1());
+
+		//eg for function returned
+			var firstfunction = function() {
+				return function(){
+					console.log('function returned');
+				}
+			}
+			var secondfunction = firstfunction();
+			secondfunction();
+
+		//function with its own ppty
+			var ppty = function(){
+				name= 'karthika';
+				id= 101;
+				console.log(name+"  "+id);
+			}
+			ppty();
+
+		//function using this
+			var thisfunc = function(){
+				this.type= 'Hello';
+				name= 'World';
+				console.log(this.type+" "+this.name);
+			}
+			thisfunc();
+
+		//function with log method
+			var k = {
+				a: 1,
+				b: 2,
+				c: function log(){
+				console.log(this);
+				}
+			}
+			k.c();
+
+		//function with proto
+			var x = {
+				a: 1,
+				xlog: function log(){
+					console.log(this);
+					}
+				}
+			var y = {
+				b: 1,
+				__proto__: x
+				}
+			var z = {
+				c: 1,
+				__proto__: x
+			}
+			x.xlog();
+		 	y.xlog();
+			z.xlog();
+
+		//function with proto
+			var xx = {
+				aa: 1,
+				xxlog: function log(){
+					console.log(this);
+					}
+				}
+			var yy = {
+				bb: 1,
+				__proto__: xx,
+				yylog: function log(){
+					console.log(this);
+					}
+				}
+			var zz = {
+				cc: 1,
+				__proto__: yy
+			}
+			xx.xxlog();
+		 	yy.xxlog();
+			zz.yylog();
+
+
+	</script>
+</body>
+</html>
