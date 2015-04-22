@@ -41,18 +41,15 @@
 			secondfunction();
 
 		//function with its own ppty
-			function ppty(){
-				name= 'karthika';
+			var ownppty = function ppty(){
 				var id= 102;
-				console.log(name+"  "+id);
+				console.log(id);
 			}
-			ppty();
+			ownppty();
 
 		//function using this
 			var thisfunc = function(){
-				type= 'Hello';
 				console.log(this);
-				console.log(this.type+" "+name);
 			}
 			thisfunc();
 
@@ -60,11 +57,11 @@
 			var k = {
 				a: 1,
 				b: 2,
-				c: function log(){
+				log: function(){
 				console.log(this);
 				}
 			}
-			k.c();
+			k.log();
 
 		//function with proto
 			var x = {
