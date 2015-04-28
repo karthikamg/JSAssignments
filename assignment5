@@ -1,0 +1,64 @@
+var Car = function(option){
+	this.bodyColor = option.bodyColor || 'blue';
+	this.brake = option.brake || 'disc';
+	this.groundClearance = option.ground || 'high';
+	this.hasAc = option.hasAc|| false;
+	this.seat = option.seat || 4;
+	this.sunRoof = option.sunRoof || true;
+
+	this.roof = 'normal roof';
+	this.basemodel = false;
+	this.brakesystem = 'effective';
+}
+
+Car.prototype.carroof = function() {
+	if( this.sunRoof || this.seat>4 ){
+		this.roof = 'stylish roof';
+	};
+};
+Car.prototype.carmodel = function() {
+	if(!this.hasAc){
+		this.basemodel = true;
+	};
+};
+Car.prototype.effbrake = function() {
+	if(this.brake == 'drum'){
+		this.brakesystem = 'less efficient';
+	}
+	else{
+		this.brakesystem = 'more efficient';
+	};
+};
+
+ var ambassador = new Car({
+ 	bodyColor: 'white',
+ 	brake: 'drum',
+ 	ground: 'high',
+ 	hasAc: false,
+ 	seat: 4,
+ 	sunRoof: false
+ });
+ var maruti = new Car({
+ 	bodyColor: 'red',
+ 	brake: 'disc',
+ 	ground: 'low',
+ 	hasAc: false,
+ 	seat: 4,
+ 	sunRoof: false
+ });
+ var hondaCity = new Car({
+ 	bodyColor: 'black',
+ 	brake: 'disc',
+ 	ground: 'low',
+ 	hasAc: true,
+ 	seat: 4,
+ 	sunRoof: true
+ });
+ var scorpio = new Car({
+ 	bodyColor: 'grey',
+ 	brake: 'disc',
+ 	ground: 'high',
+ 	hasAc: true,
+ 	seat: 8,
+ 	sunRoof: true
+ });
